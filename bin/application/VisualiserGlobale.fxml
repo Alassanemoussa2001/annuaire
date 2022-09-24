@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="996.0" style="-fx-background-color: green;" styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VisualiserGlobaleController">
+    <center>
+      <AnchorPane prefHeight="675.0" prefWidth="938.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tbt" layoutX="240.0" layoutY="93.0" prefHeight="462.0" prefWidth="654.0">
+              <columns>
+                <TableColumn fx:id="nom_col" prefWidth="149.0" text="Nom" />
+                <TableColumn fx:id="prenom_col" prefWidth="149.0" text="Prenom" />
+                  <TableColumn fx:id="dpt_col" prefWidth="140.0" text="Département" />
+                  <TableColumn fx:id="promo_col" prefWidth="132.0" text="Promotion" />
+                  <TableColumn fx:id="annee_col" prefWidth="83.0" text="Année" />
+              </columns>
+            </TableView>
+            <TextField fx:id="nomText" layoutX="31.0" layoutY="96.0" prefHeight="25.0" prefWidth="200.0" promptText="Nom" />
+            <TextField fx:id="prenomText" layoutX="31.0" layoutY="138.0" prefHeight="25.0" prefWidth="200.0" promptText="Prénom" />
+            <TextField fx:id="dptText" layoutX="31.0" layoutY="190.0" prefHeight="25.0" prefWidth="200.0" promptText="Département" />
+            <TextField fx:id="promoText" layoutX="31.0" layoutY="238.0" prefHeight="25.0" prefWidth="200.0" promptText="Promotion" />
+            <TextField fx:id="anneeText" layoutX="31.0" layoutY="289.0" prefHeight="25.0" prefWidth="200.0" promptText="Année" />
+            <Button fx:id="bntAjout" layoutX="53.0" layoutY="339.0" mnemonicParsing="false" onAction="#handlebtnAjout" onMouseClicked="#handlebtnAjout" prefHeight="41.0" prefWidth="152.0" styleClass="dark-blue" stylesheets="@application.css" text="Ajouter" />
+            <Button fx:id="bntModifier" layoutX="52.0" layoutY="400.0" mnemonicParsing="false" onAction="#handlebntModifier" onMouseClicked="#handlebntModifier" prefHeight="41.0" prefWidth="152.0" styleClass="bntgreen" stylesheets="@application.css" text="Modifier" />
+            <Button layoutX="51.0" layoutY="457.0" mnemonicParsing="false" onMouseClicked="#supprimerStagiaire" prefHeight="41.0" prefWidth="152.0" styleClass="bnt-grey" stylesheets="@application.css" text="Supprimer" />
+            <Button fx:id="bntImprimer" layoutX="51.0" layoutY="513.0" mnemonicParsing="false" onAction="#handlebtnimprimer" prefHeight="41.0" prefWidth="152.0" styleClass="blue" stylesheets="@application.css" text="Imprimer" />
+            <ImageView fitHeight="43.0" fitWidth="60.0" layoutX="31.0" layoutY="14.0">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="barredeREcherche" layoutX="252.0" layoutY="24.0" prefHeight="25.0" prefWidth="285.0" />
+            <Button fx:id="btnRecherSimple" layoutX="550.0" layoutY="24.0" mnemonicParsing="false" onAction="#handlebtnRecherSimple" prefHeight="26.0" prefWidth="125.0" styleClass="bnt" stylesheets="@application.css" text="Rechercher" />
+            <Button fx:id="btnRecherAvan" layoutX="480.0" layoutY="57.0" mnemonicParsing="false" onAction="#handleRechercheAva" prefHeight="19.0" prefWidth="101.0" styleClass="bnt_rond" stylesheets="@application.css" text="Recherche avancée">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDeconnexion" layoutX="810.0" layoutY="5.0" mnemonicParsing="false" onAction="#handlebtnDeconnexion" prefHeight="41.0" prefWidth="45.0" styleClass="re" stylesheets="@application.css" />
+            <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="824.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/icons8-fermer-24.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

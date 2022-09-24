@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="584.0" prefWidth="616.0" style="-fx-background-color: #383D94;" styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VisualiserController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="559.0" prefWidth="612.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="73.0">
+               <image>
+                  <Image url="@../../../Lab2SB/src/application/logo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="BarreRecherche" layoutX="120.0" layoutY="78.0" prefHeight="25.0" prefWidth="300.0" styleClass="TextField:focused" stylesheets="@application.css" />
+            <Button fx:id="btnREcherche" layoutX="438.0" layoutY="76.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" styleClass="ipad-dark-grey Text" stylesheets="@application.css" text="Rechercher" />
+            <TableView fx:id="tbl" layoutX="14.0" layoutY="168.0" prefHeight="356.0" prefWidth="442.0">
+              <columns>
+                <TableColumn fx:id="nom" prefWidth="82.0" text="Nom" />
+                <TableColumn fx:id="prenom" prefWidth="83.0" text="Prénom" />
+                  <TableColumn fx:id="dpt" prefWidth="102.0" text="Département" />
+                  <TableColumn fx:id="promo" prefWidth="93.0" text="Promotion" />
+                  <TableColumn fx:id="annee" prefWidth="114.0" text="Année" />
+              </columns>
+            </TableView>
+            <Button fx:id="bntAjouter" layoutX="459.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleButton" prefHeight="38.0" prefWidth="116.0" styleClass="bntorange" stylesheets="@application.css" text="Ajouter">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModifier" layoutX="460.0" layoutY="280.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="118.0" styleClass="bntorange" stylesheets="@application.css" text="Modifier">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSupprimer" layoutX="459.0" layoutY="346.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="117.0" styleClass="bntorange" stylesheets="@application.css" text="Supprimer">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnImprimer" layoutX="460.0" layoutY="414.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="121.0" styleClass="bntorange" stylesheets="@application.css" text="Imprimer">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="bntDeconnextion" layoutX="563.0" mnemonicParsing="false" onAction="#handlebbntDeconnextion" prefHeight="40.0" prefWidth="42.0" styleClass="bnt_rond" stylesheets="@application.css" />
+            <Button layoutX="317.0" layoutY="115.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="104.0" styleClass="ipad-dark-grey Text" stylesheets="@application.css" text="Recherche avancée">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="19.0" fitWidth="18.0" layoutX="575.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" styleClass="bnt_rond">
+               <image>
+                  <Image url="@../../../../../Downloads/icons8-fermer-24.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="688.0" prefWidth="616.0" style="-fx-background-color: green;" styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RechercheAvanceeController">
+   <center>
+      <AnchorPane prefHeight="622.0" prefWidth="605.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="56.0" layoutY="-7.0">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="bntDeconnextion" layoutX="517.0" layoutY="8.0" mnemonicParsing="false" onAction="#handlebntDeconnextion" prefHeight="43.0" prefWidth="43.0" styleClass="bnt_rond" stylesheets="@application.css" />
+            <AnchorPane layoutX="64.0" layoutY="354.0" prefHeight="307.0" prefWidth="483.0" style="-fx-background-color: #DCF5E8;">
+               <children>
+                  <Label layoutX="35.0" layoutY="42.0" prefHeight="17.0" prefWidth="109.0" text="Nom">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="49.0" layoutY="88.0" prefHeight="17.0" prefWidth="109.0" text="Prenom">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="68.0" layoutY="133.0" prefHeight="20.0" prefWidth="89.0" text="Département">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="175.0" prefHeight="20.0" prefWidth="87.0" text="Promotion">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="92.0" layoutY="228.0" prefHeight="20.0" prefWidth="51.0" text="Année">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nomrecher" layoutX="177.0" layoutY="45.0" prefHeight="25.0" prefWidth="146.0" />
+                  <TextField fx:id="prenomRech" layoutX="177.0" layoutY="87.0" prefHeight="25.0" prefWidth="146.0" />
+                  <TextField fx:id="dptRech" layoutX="177.0" layoutY="130.0" prefHeight="25.0" prefWidth="142.0" />
+                  <TextField fx:id="promoRech" layoutX="177.0" layoutY="175.0" prefHeight="25.0" prefWidth="141.0" />
+                  <TextField fx:id="anneeRech" layoutX="175.0" layoutY="225.0" prefHeight="25.0" prefWidth="143.0" />
+                  <Button fx:id="btnValider" layoutX="357.0" layoutY="262.0" mnemonicParsing="false" onAction="#handlebtnValider" prefHeight="32.0" prefWidth="112.0" styleClass="dark-blue" stylesheets="@application.css" text="Recherche" />
+                  <Button fx:id="bntannuler" layoutX="28.0" layoutY="262.0" mnemonicParsing="false" onAction="#handlebntannuler" prefHeight="32.0" prefWidth="112.0" styleClass="blue" stylesheets="@application.css" text="Annuler" />
+                  <Line endX="100.0" layoutX="71.0" layoutY="244.0" startX="100.0" startY="-200.0" stroke="#e8dddd" />
+                  <RadioButton layoutX="14.0" layoutY="6.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="79.0" text="1 Critère" />
+                  <RadioButton layoutX="108.0" layoutY="6.0" mnemonicParsing="false" text="2 Critères" />
+                  <RadioButton layoutX="200.0" layoutY="6.0" mnemonicParsing="false" text="3Critères" />
+                  <RadioButton layoutX="288.0" layoutY="6.0" mnemonicParsing="false" text="4 Critères" />
+                  <RadioButton layoutX="382.0" layoutY="6.0" mnemonicParsing="false" text="5Critères" />
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="13.0" fitWidth="18.0" layoutX="532.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Downloads/icons8-fermer-24.png" />
+               </image>
+            </ImageView>
+            <TableView layoutX="32.0" layoutY="57.0" prefHeight="297.0" prefWidth="553.0">
+              <columns>
+                <TableColumn prefWidth="118.0" text="Nom" />
+                <TableColumn prefWidth="144.0" text="Prenom" />
+                  <TableColumn prefWidth="82.0" text="Département" />
+                  <TableColumn prefWidth="102.0" text="Promotion" />
+                  <TableColumn prefWidth="106.0" text="Année" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+   </center>
+   <top>
+      <MenuBar prefHeight="16.0" prefWidth="586.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
